@@ -1,9 +1,12 @@
 package org.launchcode.models;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /**
  * Created by LaunchCode
  */
-public class Job {
+public class Job extends ArrayList<HashMap<String, String>> {
 
     private int id;
     private static int nextId = 1;

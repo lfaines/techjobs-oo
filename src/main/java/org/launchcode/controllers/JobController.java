@@ -6,6 +6,7 @@ import org.launchcode.models.data.JobData;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,16 +25,9 @@ public class JobController {
 
     // The detail display for a given Job at URLs like /job?id=17
     @RequestMapping(value = "", method = RequestMethod.GET)
-    public String index(Model model, int id) {
+    public String index(Model model, @PathVariable int id) {
 
         // TODO #1 - get the Job with the given ID and pass it into the view
-
-        //model.addAttribute();
-        //if(Job.equals("id")) {
-          //  ArrayList<HashMap<Job>> jobs = jobData.findById(id);
-            //Employer anEmployer = jobData.getEmployers().findById(id);
-        //}
-        //ArrayList<HashMap<String, String>> someJobs = jobData.findById(id);
         Job someJobs = jobData.findById(id);
         model.addAttribute("jobs", someJobs);
 

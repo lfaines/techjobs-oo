@@ -9,6 +9,7 @@ import java.util.HashMap;
 /**
  * Created by LaunchCode
  */
+
 public class JobData {
 
     private ArrayList<Job> jobs = new ArrayList<>();

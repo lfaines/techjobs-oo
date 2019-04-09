@@ -6,10 +6,8 @@ import java.util.HashMap;
 /**
  * Created by LaunchCode
  */
-public class Job extends ArrayList<HashMap<String, String>> {
 
-    private int id;
-    private static int nextId = 1;
+public class Job extends ArrayList<HashMap<String, String>> {
 
     private String name;
     private Employer employer;
@@ -17,16 +15,13 @@ public class Job extends ArrayList<HashMap<String, String>> {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
-    public Job() {
-        id = nextId;
-        nextId++;
-    }
+    private int id;
+    private static int nextId = 1;
 
     public Job(String aName, Employer aEmployer, Location aLocation,
                PositionType aPositionType, CoreCompetency aSkill) {
 
         this();
-
         name = aName;
         employer = aEmployer;
         location = aLocation;
@@ -34,6 +29,12 @@ public class Job extends ArrayList<HashMap<String, String>> {
         coreCompetency = aSkill;
 
     }
+
+    public Job() {
+        id = nextId;
+        nextId++;
+    }
+
 
     public String getName() {
         return name;
